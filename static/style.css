@@ -1,0 +1,252 @@
+/*
+    General Body and HTML Setup
+*/
+:root {
+    --primary-color: #ff9c54; /* Logo orange */
+    --secondary-color: #ff9c54; 
+    --background-color:#ffffff; /* Light beige background */
+    --text-color: #ff9c54; /* Logo orange for all text */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+.coming-soon-section h1,
+.coming-soon-section .description,
+.reviews-heading,
+.footer-section p,
+.footer-section a,
+.copyright {
+    color: var(--primary-color);
+}
+
+/* .overlay {
+    background-color: rgba(255, 255, 255, 0.7);  70% opaque white overlay 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: #f28c48; /* Set default text color to logo color */
+    background-color: #ffffff; /* Light background similar to logo bg */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: none; /* Remove old background image */
+}
+
+/* body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; */
+    
+    /* Change this line to reference your local file */
+    /* background-image: url('backgroud.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative; /* Add this line */
+    /* overflow-x: hidden; /* Add this to prevent horizontal scroll */
+/* } */ 
+
+/*
+    Header & Logo Styling
+*/
+.header-section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.logo-container {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+    Main Content & "Coming Soon" Section
+*/
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.coming-soon-section {
+    margin-bottom: 2rem;
+}
+
+.coming-soon-section h1 {
+     font-family: var(--font-heading);
+    font-size: 4rem;
+    /* color: #ffffff; Changed to white for better visibility */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+    /* text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);  */
+}
+
+.coming-soon-section .description {
+     font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto;
+    line-height: 1.6;
+    /* color: #f5f5f5; Light text */
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); Improves readability */
+}
+
+/*
+    Gallery Section (Placeholder for Images)
+*/
+.gallery-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 900px;
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures images keep aspect ratio and fill space */
+}
+
+.image-placeholder {
+    background-color: #e0e0e0;
+    height: 250px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+    NEW: Reviews Section Styling
+*/
+.reviews-section {
+    margin: 4rem 0;
+    padding: 0 1rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+.reviews-heading {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    /* color: #f5f5f5; Light text */
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); Improves readability */
+    margin-bottom: 2rem;
+}
+
+.reviews-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+}
+
+.review-item video,
+.review-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*
+    Footer Styling
+*/
+.footer-section p,
+.footer-section a,
+.footer-section .insta-text {
+    font-weight: bold;
+}
+
+.insta-text {
+    margin-left: 8px;
+    color: var(--primary-color);
+    vertical-align: middle;
+}
+
+.instagram-link svg {
+    vertical-align: middle;
+    fill: var(--primary-color);
+}
+
+.footer-section {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.contact-details {
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+}
+
+.social-links .instagram-link {
+    color: var(--primary-color);
+    margin-top: 1rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links .instagram-link:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/*
+    Responsive Design for smaller screens
+*/
+@media (max-width: 768px) {
+    .coming-soon-section h1 {
+        font-size: 3rem;
+    }
+    .gallery-section {
+        grid-template-columns: 1fr;
+    }
+    .image-placeholder {
+        height: 200px;
+    }
+    .reviews-container {
+        flex-direction: column;
+    }
+}
